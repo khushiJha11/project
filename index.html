@@ -1,0 +1,135 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Disk Scheduling Algorithm</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <!-- <img src="Dex Tutor.png" alt="Dex-tutor" height="80px" width="180px" /> -->
+      <div class="header-list">
+        <ul>
+          <li>
+            <a href=""><button>Home</button></a>
+          </li>
+          <li>
+            <a href=""><button>Courses</button></a>
+          </li>
+          <li>
+            <a href=""><button>Blog</button></a>
+          </li>
+          <li>
+            <a href="algo.html"><button>ALGORITHMS</button></a>
+          </li>
+          <li>
+            <a href=""><button>CONTACT US</button></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="body-container">
+      <div class="container-element">
+        <article>
+          <h2>Disk Scheduling Algorithm:-</h2><br>
+          <!-- <span
+            ><a href="">Programs</a> / By <a href="">Khushi jha</a></span
+          > -->
+          <p>
+            Disk scheduling algorithms are used to come with an order in which
+            the I/O read/write requests by the different process should be
+            satisfied. The aim is to minimize the seek time i.e., the time to
+            move from one sector to another. First Come First Serve (FCFS) disk
+            scheduling algorithm serves the incoming requests in order i.e., the
+            request which came first will be satisfied first. For example, if
+            the order of I/O requests is 10, 40, 20, 50, 35 and the current head
+            position is 45, then the order of fulfilling the requests will be
+            <br />
+            45 -> 10 -> 40 -> 20 -> 50 ->35 <br />
+            because the first request was for sector 10, then 40 and so on. For
+            more details refer Page Replacement Algorithms. FCFS algorithm
+            program in C is implemented below.
+          </p>
+          <br />
+          <h4>
+            Variable description for the program for FCFS disk scheduling
+            algorithm
+          </h4>
+          <p></p>
+          <p>
+            req[] – array for taking the request, mov – to calculate total head
+            movement
+          </p>
+          <br />
+          <!-- <h3><strong>Disk Scheduling Algorithm</strong> Program in C</h3>
+          <pre class="algo-codeblock">
+                <code>
+                    #include&lt;math.h&gt;
+                    #include&lt;stdio.h&gt;
+                    #include&lt;stdlib.h&gt;
+                    int main()
+                    {
+                        int i,n,req[50],mov=0,cp;
+                        printf("enter the current position\n");
+                        scanf("%d",&amp;cp);
+                        printf("enter the number of requests\n");
+                        scanf("%d",&amp;n);
+                        printf("enter the request order\n");
+                        for(i=0;i&lt;n;i++)
+                        {
+                            scanf("%d",&amp;req[i]);
+                        }
+                        mov=mov+abs(cp-req[0]); // abs is used to calculate the absolute value
+                        printf("%d -&gt; %d",cp,req[0]);
+                        for(i=1;i&lt;n;i++)
+                        {
+                            mov=mov+abs(req[i]-req[i-1]);
+                            printf(" -&gt; %d",req[i]);
+                        }
+                        printf("\n");
+                        printf("total head movement = %d\n",mov);
+                    }
+
+                </code>
+            </pre>
+          <h3>Output</h3> -->
+          <!-- <figure>
+            <img src="codefsfc_algo.png" alt="code-output" />
+          </figure> -->
+          <br />
+          <!-- <h4>How it works</h4>
+          <br />
+          <p>
+            In FCFS disk scheduling algorithm program the order of requests is
+            stored in the req[] array. The movement between the requests is
+            calculated by taking the absolute value of the difference between
+            the values at consecutive index positions of the array. Finally, all
+            the movements are added to get the total head movement.
+          </p> -->
+          <ul>
+            <li><strong> Seek Time </strong> :  Seek time is the time taken to locate the disk arm to a specified track where the data is to be read or <b></b>
+               So the disk scheduling algorithm that gives minimum average seek time is better.</li><br>
+
+               <li><strong>Rotational Latency</strong> : Rotational Latency is the time taken by the desired sector of disk to rotate into a position 
+                so that it can access the read/write heads.  So the disk scheduling algorithm that gives minimum rotational latency is better.</li><br>
+
+                <li><strong>Transfer Time :</strong> Transfer time is the time to transfer the
+                   It depends on the rotating speed of the disk and number of bytes to be transferred.</li><br>
+                   <li><strong>Disk Access Time :</strong> Disk Access Time = Seek Time + 
+                    Rotational Latency + 
+                    Transfer Time </li><br>
+          </ul>
+          <br />
+          <h3>Relevant Programs</h3>
+          <br />
+          <ul>
+            <li><a href="">SSTF algorithm program in C</a></li>
+            <li><a href="">LOOK algorithm program in C</a></li>
+            <li><a href="">SCAN algorithm program in C</a></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </body>
+</html>

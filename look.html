@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="look.css"
+</head>
+<body>
+    <h1><strong>Look Algorithm:</strong></h1>
+    <p>As LOOK is similar to SCAN algorithm, in similar way, CLOOK is similar to CSCAN disk scheduling algorithm. 
+        In CLOOK, the disk arm in spite of going to the end goes only to the last request to be serviced in front of the head and then from there goes to the other end’s last request.
+         Thus, it also prevents the extra delay which occurred due to unnecessary traversal to the end of the disk.</p><br><br>
+
+         <h2><strong>Example:</strong></h2>
+        <p>Suppose the requests to be addressed are-82,170,43,140,24,16,190.<br><br>
+          And the Read/Write arm is at 50, and it is also given that the disk arm should move “towards the larger value” <br><br>
+          So, the seek time is calculated as:
+
+=(190-50)+(190-16)+(43-16) 
+=341</p>
+
+<h2><strong>Advantage:</strong></h2>
+<ul>
+    <li>Starvation does not occur.</li>
+    <li>Since the head does not go to the end of the disk, the time is not wasted here.</li>
+</ul>
+
+<h2>Disadvantage:</h2>
+<ul>
+    <li>The arm has to be conscious to find the last request.</li>
+</ul>
+
+</body>
+</html>

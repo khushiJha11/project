@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<link rel="stylesheet" href="algo.css">
+</head>
+<body>
+    <h1>Disk Scheduling Algorithm</h1>
+    <p>Let's now more about disk scheduling algorithm</p>
+   <section class="row top">
+    <div class="card row" style="width: 18rem;">
+        <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+        <div class="card-body">
+          <h5 class="card-title title">First Come First Serve:-</h5>
+          <br>
+          <br>
+          <p class="card-text">1.In FCFS the disk controller chooses the next request in the queue to service.</p>
+          <br>
+          <br>
+          <a href="fcfs.html" class="btn btn-primary">View Algorithm</a>
+          
+        </div>
+      </div>
+
+      <div class="card row" style="width: 18rem;">
+        <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+        <div class="card-body">
+          <h5 class="card-title title">Shortest Seek Time First:-</h5>
+          <p class="card-text">1.SSTF selects the request with the least seek time from the current head position. SSTF chooses the pending request closest to the current head position.</p>
+          <br>
+          <br>
+          <a href="sst.html" class="btn btn-primary">View Algorithm</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+        <div class="card-body">
+          <h5 class="card-title title">SCAN:-</h5>
+          <p class="card-text">1.The disk arm starts at one end of the disk and moves towards other end, servicing requests as it reaches each cylinder. At the other end, the direction of head movement is reversed, and servicing continues.</p>
+           <br>
+          <a href="scan.html" class="btn button btn-primary">View Algorithm</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+        <div class="card-body">
+          <h5 class="card-title title">LOOK:-</h5>
+          <p class="card-text">1.Same as SCAN but with the difference that the arm goes only as far as the final request in each direction. Then, it reverses direction immediately without going all the way to the end of the disk.</p>
+          <br>
+          <a href="look.html" class="btn btn-primary">View Algorithm</a>
+        </div>
+      </div>
+    </section>
+</body>
+</html>

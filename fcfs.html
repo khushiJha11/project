@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fcfs.css">
+</head>
+<body>
+    <h1>First Come First Serve:</h1>
+    <p>FCFS is the simplest disk scheduling algorithm. As the name suggests, this algorithm entertains requests in the order they arrive in the disk queue. 
+     The algorithm looks very fair and there is no starvation (all requests are serviced sequentially) but generally, it does not provide the fastest service.</p>
+     <br>
+        <h2>Algorithm:</h2>
+        <p>
+        <ol type="1">
+            <li>Let Request array represents an array storing indexes of tracks that have been requested in 
+                ascending order of their time of arrival. ‘head’ is the position of disk head.</li>
+            <li>Let us one by one take the tracks in default order and calculate the 
+                absolute distance of the track from the head.</li>
+            <li>Increment the total seek count with this distance.</li>
+            <li>Currently serviced track position now becomes the new head position.</li>
+            <li>Go to step 2 until all tracks in request array have not been serviced.</li>
+        </ol></p>
+        <br>
+
+        <h2>Advantage:</h2>
+        <ul>
+            <li>Every request gets a fair chance</li>
+            <li>No indefinite postponement</li>
+        </ul><br>
+
+        <h2>Disadvantage:</h2>
+        <ul>
+            <li>Does not try to optimize seek time</li>
+            <li>May not provide the best possible service</li>
+        </ul><br>
+
+        <h2><strong>Example:</strong></h2>
+        <p>Suppose the order of request is- (82,170,43,140,24,16,190)<br>
+            And current position of Read/Write head is : 50 <br>
+            So, total seek time: 
+                =(82-50)+(170-82)+(170-43)+(140-43)+(140-24)+(24-16)+(190-16) 
+                =642 </p>
+
+        <!-- <h4>Disck scheduling algorithm code in C</h4>
+        
+            #include<math.h>
+                #include<stdio.h>
+                #include<stdlib.h>
+                int main()
+                {
+                    int i,n,req[50],mov=0,cp;
+                    printf("enter the current position\n");
+                    scanf("%d",&cp);
+                    printf("enter the number of requests\n");
+                    scanf("%d",&n);
+                    printf("enter the request order\n");
+                    for(i=0;i<n;i++)
+                    {
+                        scanf("%d",&req[i]);
+                    }
+                    mov=mov+abs(cp-req[0]); // abs is used to calculate the absolute value
+                    printf("%d -> %d",cp,req[0]);
+                    for(i=1;i<n;i++)
+                    {
+                        mov=mov+abs(req[i]-req[i-1]);
+                        printf(" -> %d",req[i]);
+                    }
+                    printf("\n");
+                    printf("total head movement = %d\n",mov);
+                }
+        
+         -->
+        
+    
+</body>
+</html>

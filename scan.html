@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="scan.css"
+</head>
+<body>
+    <h1><strong>Scan Algorithm:</strong></h1>
+    <p>In SCAN algorithm the disk arm moves into a particular direction and services the requests coming in its path and after reaching the end of disk,
+         it reverses its direction and again services the request arriving in its path. So, this algorithm works as an elevator and hence also known as elevator 
+         algorithm. As a result, the requests at the midrange are serviced more and those arriving behind the disk arm will have to wait.</p><br>
+
+         <h2><strong>Example:</strong></h2>
+        <p> Suppose the requests to be addressed are-82,170,43,140,24,16,190.<br>
+          And the Read/Write arm is at 50, and it is also given that the disk arm should move “towards the larger value”. <br>
+
+          Therefore, the seek time is calculated as:
+
+=(199-50)+(199-16) 
+=332</p>
+
+<h2><strong>Advantage:</strong></h2>
+<ul>
+    <li>High throughput</li>
+     <li>  Low variance of response time</li> 
+       <li> Average response time</li><br>
+
+ <h2><strong>Disadvantage:</strong></h2>
+       <li>Long waiting time for requests for locations just visited by disk arm</li>
+</ul>
+</body>
+</html>

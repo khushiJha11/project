@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sst.css"
+</head>
+<body>
+    <h1><strong>Short Seek Time First </strong></h1>
+    <p>In SSTF (Shortest Seek Time First), requests having shortest seek time are executed first.
+        So, the seek time of every request is calculated in advance in the queue and then they are scheduled according to their calculated seek time.<br>
+         As a result, the request near the disk arm will get executed first. SSTF is certainly an 
+         improvement over FCFS as it decreases the average response time and increases the throughput of system.
+          Let us understand this with the help of an example.</p><br>
+
+          <h2><strong>Example: </strong></h2>
+
+          <p>Suppose the order of request is- (82,170,43,140,24,16,190) <br>
+           And current position of Read/Write head is : 50  <br>
+           So, total seek time:
+
+=(50-43)+(43-24)+(24-16)+(82-16)+(140-82)+(170-140)+(190-170) 
+=208</p>
+
+<h2><strong>Advantage:</strong></h2>
+<ul>
+    <li>Average Response Time decreases</li>
+    <li>Throughput increases</li>
+</ul>
+
+<h2><strong>Disadvantage:</strong></h2>
+<ul>
+    <li>Overhead to calculate seek time in advance</li>
+    <li>Can cause Starvation for a request if it has higher seek time as compared to incoming requests</li>
+    <li>High variance of response time as SSTF favours only some requests</li>
+</ul>
+</body>
+</html>
